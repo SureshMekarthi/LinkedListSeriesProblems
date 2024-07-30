@@ -25,5 +25,19 @@ namespace LinkedListSeries
             back = null;
         }
 
+        private static NodeD ConvertArr2DLL(int[] arr)
+        {
+            NodeD head = new NodeD(arr[0]);
+            NodeD prev = head;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                NodeD temp = new NodeD(arr[i], null, prev);
+                prev.next = temp;
+                prev = temp;
+            }
+            return head;
+        }
+
     }
 }
