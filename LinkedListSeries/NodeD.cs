@@ -107,5 +107,23 @@ namespace LinkedListSeries
 
             return head;
         }
+
+        public static NodeD ReverseDLL1(NodeD head)
+        {
+            if (head == null || head.next == null) { return head; }
+
+            NodeD pre = null;
+            NodeD current = head;
+            while (current != null)
+            {
+                pre = current.back;
+
+                current.back = current.next;
+                current.next = pre;
+                current = current.back;
+            }
+
+            return pre.back;
+        }
     }
 }
