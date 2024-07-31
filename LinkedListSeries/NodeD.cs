@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,27 @@ namespace LinkedListSeries
             }
             return head;
         }
+
+        private static NodeD DeleteTail(NodeD head)
+        {
+            if (head == null || head.next == null)
+                return null;
+
+
+            NodeD tail = head;
+
+            while (tail.next != null)
+            {
+                tail = tail.next;
+            }
+
+            NodeD newTail = tail.back;
+            newTail.next = null;
+            tail.back = null;
+
+            return head;
+        }
+
 
     }
 }
