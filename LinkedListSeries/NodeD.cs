@@ -81,5 +81,31 @@ namespace LinkedListSeries
                 head = head.next;
             }
         }
+
+        public static NodeD ReverseDLL(NodeD head)
+        {
+            if (head == null || head.next == null)
+                return head;
+
+            Stack<int> stack = new Stack<int>();
+
+            NodeD temp = head;
+
+            while (temp != null)
+            {
+                stack.Push(temp.data);
+                temp = temp.next;
+            }
+
+            temp = head;
+
+            while (temp != null)
+            {
+                temp.data = stack.Pop();
+                temp = temp.next;
+            }
+
+            return head;
+        }
     }
 }
