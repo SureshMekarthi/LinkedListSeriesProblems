@@ -60,6 +60,18 @@ namespace LinkedListSeries
             return head;
         }
 
+        private static NodeD DeleteHead(NodeD head)
+        {
+            {
+                if (head == null || head.next == null) return null;
+
+                NodeD prev = head;
+                head = head.next;
+                head.back = null;
+                prev.next = null;
+                return head;
+            }
+
+        }
 
     }
-}
