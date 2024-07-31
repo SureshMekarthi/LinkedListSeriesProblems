@@ -73,5 +73,13 @@ namespace LinkedListSeries
             }
 
         }
-
+        private static void Print(NodeD head)
+        {
+            while (head != null)
+            {
+                Console.WriteLine($" {head.data}");
+                head = head.next;
+            }
+        }
     }
+}
