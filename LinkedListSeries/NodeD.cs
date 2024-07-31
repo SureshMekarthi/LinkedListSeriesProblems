@@ -26,7 +26,7 @@ namespace LinkedListSeries
             back = null;
         }
 
-        private static NodeD ConvertArr2DLL(int[] arr)
+        public static NodeD ConvertArr2DLL(int[] arr)
         {
             NodeD head = new NodeD(arr[0]);
             NodeD prev = head;
@@ -40,7 +40,7 @@ namespace LinkedListSeries
             return head;
         }
 
-        private static NodeD DeleteTail(NodeD head)
+        public static NodeD DeleteTail(NodeD head)
         {
             if (head == null || head.next == null)
                 return null;
@@ -60,7 +60,7 @@ namespace LinkedListSeries
             return head;
         }
 
-        private static NodeD DeleteHead(NodeD head)
+        public static NodeD DeleteHead(NodeD head)
         {
             {
                 if (head == null || head.next == null) return null;
@@ -73,7 +73,7 @@ namespace LinkedListSeries
             }
 
         }
-        private static void Print(NodeD head)
+        public static void Print(NodeD head)
         {
             while (head != null)
             {

@@ -25,8 +25,12 @@ namespace LinkedListSeries
             //// Printing the linked list
             //Node.PrintLL(head);
 
+            int[] array = { 12, 5, 6, 8 };
+            NodeD head = NodeD.ConvertArr2DLL(array);
+            NodeD.Print(head);
 
-
+            head = NodeD.DeleteHead(head);
+            NodeD.Print(head);
             Console.ReadLine();
         }
     }

@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DlinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="NodeD.cs" />
     <Compile Include="Program.cs" />
