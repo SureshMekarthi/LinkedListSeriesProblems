@@ -22,11 +22,31 @@ namespace LinkedListSeries
 
             temp = head;
 
-            while (temp != null) { 
+            while (temp != null)
+            {
                 temp.data = st.Pop();
                 temp = temp.next;
             }
             return head;
+        }
+
+        public static Node reverseLinkedList(Node head)
+        {
+            Node temp = head;
+
+            Node prev = null;
+
+            while (temp != null)
+            {
+                Node front = temp.next;
+                temp.next = prev;
+
+                prev = temp;
+
+                temp = front;
+            }
+            return prev;
+
         }
     }
 }
