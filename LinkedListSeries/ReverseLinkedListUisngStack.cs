@@ -48,5 +48,24 @@ namespace LinkedListSeries
             return prev;
 
         }
+
+        public static Node ReverseLinkedListRecursive(Node head)
+        {
+            if (head == null || head.next == null) { return head; }
+
+            Node newHead = ReverseLinkedListRecursive(head.next);
+
+            Node front = head.next;
+
+            front.next = head;
+            head.next = null;
+
+            return newHead;
+
+
+
+
+
+        }
     }
 }
