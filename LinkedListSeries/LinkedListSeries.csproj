@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetectCycle.cs" />
     <Compile Include="FindMiddleOfLinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="NodeD.cs" />

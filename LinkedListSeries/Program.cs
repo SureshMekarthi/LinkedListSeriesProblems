@@ -10,7 +10,7 @@ namespace LinkedListSeries
     {
         static void Main(string[] args)
         {
-            List<int> arr = new List<int> { 12, 8, 5, 7 };
+            List<int> arr = new List<int> { 12, 8, 5, 2, 8};
             //int val = 100;
 
             //// Creating a linked list with initial elements from the array
@@ -32,6 +32,9 @@ namespace LinkedListSeries
            Node middleNode = FindMiddleOfLinkedList.FindMiddle(head);
 
             Console.WriteLine($" then middle node is: {middleNode.data}");
+
+            bool isloopinLL = DetectCycle.DetectLoop(head);
+            Console.WriteLine($" LoopinLL: {isloopinLL}");
 
             //head = NodeD.DeleteHead(head);
             //NodeD.Print(head);
