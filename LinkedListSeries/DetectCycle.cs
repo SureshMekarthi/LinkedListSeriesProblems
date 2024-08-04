@@ -26,5 +26,25 @@ namespace LinkedListSeries
             }
             return false;
         }
+
+        public static bool SlowFastPointers(Node head)
+        {
+
+            Node temp = head;
+            Node slow = head;
+            Node fast = head;
+
+            while (fast != null || fast.next != null)
+            {
+                fast = fast.next.next;
+                slow = slow.next;
+
+                if(fast==slow)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
