@@ -43,5 +43,16 @@ namespace LinkedListSeries
 
             return dummyNode.next;
         }
+
+        public static void PrintLinkedList(Node head)
+        {
+            Node temp = head;
+
+            while (temp != null)
+            {
+                Console.WriteLine($" {temp.data}");
+                temp = temp.next;
+            }
+        }
     }
 }
