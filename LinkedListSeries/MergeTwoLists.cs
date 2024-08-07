@@ -11,31 +11,31 @@ namespace LinkedListSeries
     {
         // function to mergerd two sorted linkedlists
 
-        public Node MergeTwoLL(Node list1, Node list2)
+        public static Node MergeTwoLL(Node list1, Node list2)
         {
-            ArrayList arrayList = new ArrayList();
+            List<int> list = new List<int>();
             Node temp1 = list1;
             Node temp2 = list2;
 
             while (temp1 != null)
             {
-                arrayList.Add(temp1);
+                list.Add(temp1.data);
                 temp1 = temp1.next;
             }
 
             while (temp2 != null)
             {
-                arrayList.Add(temp2);
+                list.Add(temp2.data);
                 temp2 = temp2.next;
             }
 
-            arrayList.Sort();
+            list.Sort();
 
             Node dummyNode = new Node(-1);
             Node temp = dummyNode;
-            for (int i = 0; i < arrayList.Count; i++)
+            for (int i = 0; i < list.Count; i++)
             {
-                temp.next = new Node((int)arrayList[i]);
+                temp.next = new Node(list[i]);
 
                 temp = temp.next;
 
