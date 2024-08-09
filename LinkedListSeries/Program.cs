@@ -44,7 +44,7 @@ namespace LinkedListSeries
             Console.WriteLine("L1");
             MergeTwoLists.PrintLinkedList(list2);
 
-            Node mergeList = MergeTwoLists.MergeTwoLL(list1, list2);
+            Node mergeList = MergeTwoLists.MergeTwoLLs(list1, list2);
 
             Console.WriteLine("Merge List");
             MergeTwoLists.PrintLinkedList(mergeList);
