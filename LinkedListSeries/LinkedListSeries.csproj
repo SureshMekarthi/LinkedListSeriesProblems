@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteNthNodefromEnd.cs" />
     <Compile Include="DetectCycle.cs" />
     <Compile Include="FindMiddleOfLinkedList.cs" />
     <Compile Include="MergeTwoLists.cs" />
