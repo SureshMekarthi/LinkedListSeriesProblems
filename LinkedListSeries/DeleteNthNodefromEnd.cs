@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,29 @@ namespace LinkedListSeries
                 temp = temp.next;
             }
             temp.next = temp.next.next;
+            return head;
+        }
+
+        public static Node DeleteNthNode1(Node head, int num)
+        {
+            Node slow = head;
+            Node fast = head;
+
+            for (int i = 0; i < num; i++) 
+            {
+                fast = fast.next;
+            }
+
+            if(fast == null)
+                return head.next;
+
+            while (fast != null) { 
+                fast = fast.next;
+                slow = fast.next;
+            }
+
+            slow.next = slow.next.next;
+
             return head;
         }
     }
