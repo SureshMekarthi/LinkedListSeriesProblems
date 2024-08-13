@@ -51,6 +51,7 @@
     <Compile Include="NodeD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReOrderList.cs" />
     <Compile Include="ReverseLinkedListUisngStack.cs" />
   </ItemGroup>
   <ItemGroup>
