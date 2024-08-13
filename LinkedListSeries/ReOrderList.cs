@@ -36,5 +36,36 @@ namespace LinkedListSeries
             }
             return prev;
         }
+
+        public static void ReOrderLL(Node head)
+        {
+            if (head == null || head.next == null)
+            { return ; }
+
+            Node mid = Middle(head);
+
+            Node k = Reverse(mid.next);
+            mid.next = null;
+
+            Node c1 = head;
+            Node c2 = k;
+
+            Node f1 = null;
+            Node f2 = null;
+
+            while (c1 != null && c2 != null)
+            {
+
+                f1 = c1.next;
+                f2 = c2.next;
+
+                c1.next = c2;
+                c2.next = f1;
+
+                c1 = f1;
+                c2 = f2;
+            }
+
+        }
     }
 }
